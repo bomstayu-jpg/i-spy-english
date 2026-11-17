@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>I SPY! | English Detective Academy</title>
+<style>
+:root{--navy:#101c2c;--ink:#182536;--paper:#f4ecd9;--cream:#fffaf0;--gold:#e0b65d;--red:#a94338;--green:#386b57;--muted:#68717a}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 20% 0,#34465a,#101a28 60%);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+header{color:#fff;padding:28px 5vw 22px;border-bottom:4px solid var(--gold);background:linear-gradient(110deg,#111c2b,#26394b)}
+.topline{letter-spacing:4px;color:var(--gold);font-size:.75rem;font-weight:bold}.hero{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}.hero h1{font-family:Georgia,serif;font-size:clamp(2.6rem,7vw,5rem);margin:8px 0 0;letter-spacing:3px}.hero p{color:#dce2e8;max-width:650px;line-height:1.5}.stamp{border:3px solid var(--red);color:#efb7a9;padding:10px 14px;transform:rotate(-8deg);font-weight:bold;letter-spacing:2px}
+nav{display:flex;gap:10px;flex-wrap:wrap;padding:18px 5vw;background:#172536;position:sticky;top:0;z-index:5;box-shadow:0 5px 18px #0005}
+nav button,.tabbtn{border:1px solid #7e8b96;background:#25384b;color:#fff;padding:12px 18px;border-radius:4px;font-weight:bold;cursor:pointer;letter-spacing:.5px}nav button:hover,nav button.active,.tabbtn.active{background:var(--gold);color:#182536;border-color:var(--gold)}
+main{max-width:1100px;margin:28px auto;padding:0 18px 60px}.panel{display:none;background:var(--paper);border:1px solid #d5c6a6;border-radius:8px;padding:clamp(18px,4vw,34px);box-shadow:0 12px 35px #0005}.panel.active{display:block}.eyebrow{color:var(--red);font-size:.75rem;font-weight:bold;letter-spacing:2px;text-transform:uppercase}.panel h2{font: bold clamp(1.8rem,4vw,2.7rem) Georgia,serif;margin:6px 0 14px}.panel h3{font: bold 1.35rem Georgia,serif;color:#26394b}.lead{font-size:1.08rem;line-height:1.6;max-width:850px}.case{background:#fff8e8;border-left:5px solid var(--gold);padding:14px 18px;margin:18px 0;border-radius:3px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}.tile{background:var(--cream);border:1px solid #d8c9a9;padding:17px;border-radius:6px}.tile strong{color:#20364a}.muted{color:var(--muted)}.controls{display:flex;gap:9px;flex-wrap:wrap;margin:14px 0}.action{background:var(--navy);color:white;border:0;border-radius:4px;padding:10px 15px;cursor:pointer;font-weight:bold}.action.gold{background:#b4832e}.action.red{background:var(--red)}.action:disabled{opacity:.5;cursor:not-allowed}input,select,textarea{font:inherit;padding:10px;border:1px solid #b8ad98;border-radius:4px;background:#fffdf7;max-width:100%}textarea{width:100%;min-height:120px;line-height:1.5}.flash{max-width:650px;min-height:260px;margin:20px auto;background:#fffaf0;border:2px solid #26394b;border-radius:10px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:25px;cursor:pointer;box-shadow:7px 7px 0 #d4c39f}.flash .word{font: bold 2rem Georgia,serif;color:#172c40}.flash .phon{color:#777;margin:8px}.flash .meaning{font-size:1.4rem;color:var(--red);margin:10px}.flash .example{font-style:italic;max-width:500px}.progress{height:8px;background:#d6c9af;border-radius:9px;overflow:hidden}.progress span{display:block;height:100%;background:var(--green);width:0}.question{padding:15px;margin:12px 0;background:#fffaf0;border:1px solid #ddcfb3;border-radius:5px}.question p{margin-top:0;font-weight:bold}.question label{display:block;margin:8px 0;line-height:1.4}.feedback{font-weight:bold;margin-top:8px}.correct{color:#286447}.wrong{color:#a94338}.passage{background:#fffaf0;padding:20px;border:1px solid #d8c9a9;border-radius:5px;line-height:1.7;white-space:normal}.tasklist li{margin:9px 0;line-height:1.5}.small{font-size:.9rem}.footer{color:#d2d9df;text-align:center;padding:20px;font-size:.85rem}.badge{display:inline-block;background:#e9d8ad;padding:4px 8px;border-radius:3px;font-size:.8rem;font-weight:bold}.rule{font:1.1rem Georgia,serif;background:#e9dfc9;padding:13px;border-radius:4px}.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}.hidden{display:none!important}
+@media(max-width:600px){nav{position:static;padding:12px}nav button{flex:1 1 42%}.stamp{display:none}}
+</style>
+</head>
+<body>
+<header><div class="topline">DEPARTMENT OF ENGLISH • TRAINING DIVISION</div><div class="hero"><div><h1>I SPY!</h1><p>English Detective Academy — Grade 9 · A2–B1<br>Observe carefully. Read between the lines. Crack the language code.</p></div><div class="stamp">TOP SECRET<br>CASE FILE 009</div></div></header>
+<nav>
+<button class="active" data-panel="home">HQ / HOME</button><button data-panel="vocab">VOCABULARY</button><button data-panel="grammar">GRAMMAR</button><button data-panel="writing">WRITING</button><button data-panel="reading">READING FILES</button>
+</nav>
+<main>
+<section id="home" class="panel active"><div class="eyebrow">Your mission starts here</div><h2>Welcome, Agent.</h2><p class="lead">Your mission is to become an English-language detective. Complete the four training departments, collect evidence, and check your answers. Start with the vocabulary cards, practise the grammar, learn how to write about a personal experience, and then solve the reading cases.</p>
+<div class="grid"><div class="tile"><div class="eyebrow">File 01</div><h3>Vocabulary</h3><p>Study the words, listen to pronunciation, and learn the Hebrew meanings. Then complete vocabulary challenges.</p><button class="action" onclick="showPanel('vocab')">Open vocabulary</button></div><div class="tile"><div class="eyebrow">File 02</div><h3>Grammar</h3><p>Train with Present Perfect Simple and Relative Clauses. Positive, negative, questions, and mixed practice.</p><button class="action" onclick="showPanel('grammar')">Open grammar</button></div><div class="tile"><div class="eyebrow">File 03</div><h3>Writing</h3><p>Follow a step-by-step guide and write about a personal experience.</p><button class="action" onclick="showPanel('writing')">Open writing</button></div><div class="tile"><div class="eyebrow">File 04</div><h3>Reading comprehension</h3><p>Read four original spy-themed texts and answer Bagrut-style questions.</p><button class="action" onclick="showPanel('reading')">Open reading files</button></div></div>
+<div class="case"><strong>Detective tip:</strong> Keep a notebook. Write down new words, grammar clues, and evidence from each text. Always support reading answers with information from the text.</div></section>
+
+<section id="vocab" class="panel"><div class="eyebrow">Evidence locker / file 01</div><h2>Vocabulary Lab</h2><p class="lead">Study each card. Click the card to turn it over, or use the buttons. Select <b>Hear it</b> to listen to the word and its example sentence. The audio uses your device's English speech voice.</p>
+<div class="controls"><input id="vsearch" placeholder="Search English or Hebrew..." oninput="filterVocab()"><select id="vgroup" onchange="filterVocab()"><option value="all">All vocabulary</option><option value="1">Word list A</option><option value="2">Word list B</option><option value="3">Word list C</option></select><span class="badge" id="vcount"></span></div>
+<div class="progress"><span id="vprogress"></span></div><div class="flash" id="flash" onclick="flipCard()"><div class="eyebrow">Evidence card · click to flip</div><div class="word" id="vword">agent</div><div class="phon" id="vpos">noun</div><div class="meaning hidden" id="vmeaning">סוכן / סוכנת</div><div class="example" id="vexample">The agent found an important clue.</div></div>
+<div class="controls" style="justify-content:center"><button class="action" onclick="prevCard()">← Previous</button><button class="action gold" onclick="flipCard()">Flip card</button><button class="action" onclick="speakCard()">🔊 Hear it</button><button class="action" onclick="nextCard()">Next →</button></div>
+<h3>Vocabulary practice</h3><p>Complete all three challenges. The questions use words from the cards above.</p><div class="controls"><button class="tabbtn active" onclick="showVQuiz('match',this)">Choose the meaning</button><button class="tabbtn" onclick="showVQuiz('gap',this)">Complete the sentence</button><button class="tabbtn" onclick="showVQuiz('hebrew',this)">Hebrew → English</button></div><div id="vquiz"></div><div class="controls"><button class="action gold" onclick="checkQuiz('vquiz')">Check answers</button><button class="action" onclick="newVQuiz()">New questions</button></div><div id="vscore" class="feedback"></div>
+</section>
+
+<section id="grammar" class="panel"><div class="eyebrow">Training room / file 02</div><h2>Grammar Training</h2><div class="controls"><button class="tabbtn active" onclick="showGrammar('pp',this)">Present Perfect Simple</button><button class="tabbtn" onclick="showGrammar('rel',this)">Relative Clauses</button><button class="tabbtn" onclick="showGrammar('mix',this)">Mixed mission</button></div><div id="grammarContent"></div></section>
+
+<section id="writing" class="panel"><div class="eyebrow">Report writing / file 03</div><h2>A Description of Personal Experience</h2><p class="lead">A good personal-experience paragraph tells the reader about something that happened to you. It includes details, feelings, and a clear ending.</p>
+<div class="case"><strong>Writing mission:</strong> Describe an interesting, surprising, exciting, or frightening experience. It can be real or imagined, but write as if it happened to you.</div>
+<h3>Step-by-step guide</h3><ol class="tasklist"><li><b>Understand the task.</b> Underline the topic words. Ask: What experience am I describing? When and where did it happen?</li><li><b>Brainstorm ideas.</b> Write notes: who was with you, what happened first, what happened next, and how you felt.</li><li><b>Plan your paragraph.</b> Beginning: introduce the event. Middle: describe the important events in time order. Ending: explain the result and your feelings.</li><li><b>Use useful time expressions.</b> For example: one day, last summer, at first, suddenly, after that, later, in the end.</li><li><b>Add details.</b> Use adjectives and sensory details. Explain what you saw, heard, or felt.</li><li><b>Check your language.</b> Check past tenses, subject–verb agreement, spelling, capital letters, and punctuation. Use linking words such as because, so, but, and although.</li><li><b>Improve your work.</b> Replace repeated words, add one interesting detail, and make sure every sentence supports the topic.</li></ol>
+<div class="two"><div class="tile"><h3>Useful sentence starters</h3><ul><li>I will never forget the day when…</li><li>It happened when I was…</li><li>At first, I thought…</li><li>Suddenly, I noticed…</li><li>I felt … because…</li><li>In the end, I learned that…</li></ul></div><div class="tile"><h3>Writing checklist</h3><label><input type="checkbox"> I introduced the experience.</label><br><label><input type="checkbox"> I included when and where it happened.</label><br><label><input type="checkbox"> I described events in order.</label><br><label><input type="checkbox"> I described my feelings.</label><br><label><input type="checkbox"> I checked grammar and punctuation.</label></div></div>
+<h3>Writing task 1 — The unexpected discovery</h3><p>You found something unusual while you were doing an ordinary activity. Describe what happened. Write 80–100 words. Include where you were, what you found, what you did, and how you felt.</p><textarea placeholder="Plan your ideas or write your paragraph here..."></textarea>
+<h3>Writing task 2 — A day I will never forget</h3><p>Describe a day when something surprising or exciting happened to you. Write 100–120 words. Include an introduction, events in time order, your feelings, and an ending.</p><textarea placeholder="Plan your ideas or write your paragraph here..."></textarea>
+<div class="case"><b>Final editing challenge:</b> Underline three time expressions, circle two adjectives, and check that your story has a clear beginning, middle, and end.</div></section>
+
+<section id="reading" class="panel"><div class="eyebrow">Intelligence files / file 04</div><h2>Reading Comprehension</h2><p class="lead">Read each case carefully. Each text is followed by Bagrut-style questions: multiple choice, wh-questions, true/false with evidence, completing a sentence, reference words, vocabulary in context, and inference.</p><div class="controls" id="readingTabs"></div><div id="readingContent"></div></section>
+</main><div class="footer">I SPY! English Detective Academy · Grade 9 · A2–B1 · Training material</div>
+<script>
+const vocab = [
+["against","prep.","נגד / מול","The spy worked against a dangerous group.","1"],
+["agent","n.","סוכן / סוכנת","The agent found an important clue.","1"],
+["apart from","prep.","מלבד / חוץ מ־","Apart from one guard, the building was empty.","1"],
+["assess","v.","להעריך","The team must assess the danger.","1"],
+["attend","v.","להשתתף / להיות נוכח","The agent will attend the meeting.","1"],
+["battle","n.","קרב","The battle lasted for hours.","1"],
+["broadcast","n., v.","שידור; לשדר","The news station will broadcast the story tonight.","1"],
+["candle","n.","נר","A candle stood beside the old map.","1"],
+["chain","n.","שרשרת","The door was locked with a heavy chain.","1"],
+["chapter","n.","פרק","Read the next chapter to find the clue.","1"],
+["character","n.","דמות","The main character is a secret agent.","1"],
+["code","n.","קוד","The message was written in a secret code.","1"],
+["confirm","v.","לאשר","Please confirm the meeting time.","1"],
+["desire","n.","רצון / תשוקה","He had a strong desire to help people.","1"],
+["device","n.","מכשיר","The agent used a small listening device.","1"],
+["director","n.","מנהל / במאי","The director planned the operation.","1"],
+["disappoint","v.","לאכזב","I don't want to disappoint my team.","1"],
+["driving license","n.","רישיון נהיגה","The officer asked to see his driving license.","1"],
+["duty-free","adj.","פטור ממכס","She bought perfume at the duty-free shop.","1"],
+["ensure","v.","לוודא / להבטיח","Check the door to ensure it is locked.","1"],
+["equally","adv.","במידה שווה","Both agents were equally brave.","1"],
+["experience","n.","חוויה / ניסיון","It was an exciting experience.","1"],
+["face-to-face","adj./adv.","פנים אל פנים","The agents finally spoke face-to-face.","1"],
+["firefighter","n.","כבאי","A firefighter rescued the child.","1"],
+["good-looking","adj.","נאה / יפה תואר","The good-looking actor played a spy.","1"],
+["government","n.","ממשלה","The government received a secret report.","1"],
+["haircut","n.","תספורת","The agent got a new haircut.","1"],
+["handsome","adj.","נאה / יפה תואר","The handsome man entered the hotel.","1"],
+["headline","n.","כותרת ראשית","The headline caught everyone's attention.","1"],
+["housework","n.","עבודות בית","She finished the housework before leaving.","1"],
+["identity","n.","זהות","The spy hid his real identity.","1"],
+["intend","v.","להתכוון","I intend to finish the mission today.","1"],
+["interview","n., v.","ראיון; לראיין","The reporter will interview the officer.","1"],
+["introduction","n.","מבוא / הקדמה","The introduction explains the mission.","1"],
+["lab","n.","מעבדה","The scientists work in a secret lab.","1"],
+["no way","phr.","אין סיכוי / בשום אופן","No way! That cannot be true.","1"],
+["novel","n.","רומן / ספר עלילתי","She is reading a novel about a spy.","1"],
+["nuclear","adj.","גרעיני","The agents searched for a nuclear device.","1"],
+["on fire","phr.","עולה באש","The old car was on fire.","1"],
+["oppose","v.","להתנגד","Many citizens oppose the dangerous plan.","1"],
+["pass","v.","לעבור / להעביר","The agent must pass the security check.","1"],
+["political","adj.","פוליטי","The story includes a political problem.","1"],
+["power","n.","כוח / עוצמה","The device has the power to stop the signal.","1"],
+["secretary","n.","מזכיר / מזכירה","The secretary answered the phone.","1"],
+["self-service","adj.","בשירות עצמי","We ate at a self-service restaurant.","1"],
+["single parent","n.","הורה יחיד","His father is a single parent.","1"],
+["spot","n., v.","מקום; להבחין","The agent spotted a strange bag.","1"],
+["spy","n., v.","מרגל; לרגל","The spy watched the building carefully.","1"],
+["stay","v.","להישאר","Stay here until I return.","1"],
+["stone","n.","אבן","A small stone covered the keyhole.","1"],
+["the best","phr.","הטוב ביותר","She is the best agent in the team.","1"],
+["the West","n.","המערב","The story takes place in the West.","1"],
+["translate","v.","לתרגם","Can you translate this secret message?","1"],
+["up-to-date","adj.","מעודכן","The agent needs up-to-date information.","1"],
+["well-made","adj.","עשוי היטב","It was a well-made disguise.","1"],
+["whether... or ...","conj.","בין אם... או...","I don't know whether he is a guard or an agent.","1"],
+["aircraft","n.","כלי טיס / מטוס","The aircraft landed safely.","2"],
+["break down","phr. v.","להתקלקל","The car may break down in the desert.","2"],
+["call","v.","להתקשר / לקרוא","Call the officer if you need help.","2"],
+["catch someone's attention","phr.","למשוך את תשומת הלב של מישהו","The strange headline caught my attention.","2"],
+["check-in","n.","דלפק / תהליך צ'ק-אין","We arrived early for check-in.","2"],
+["chief","adj.","ראשי / בכיר","The chief officer led the team.","2"],
+["citizen","n.","אזרח","Every citizen must follow the law.","2"],
+["commit","v.","לבצע (עבירה/מעשה)","The police believe someone may commit a crime.","2"],
+["creature","n.","יצור","A strange creature appeared in the story.","2"],
+["deal with","phr. v.","להתמודד עם / לטפל ב־","The agent can deal with difficult situations.","2"],
+["euro","n.","אירו","The ticket costs twenty euro.","2"],
+["examine","v.","לבדוק / לבחון","The officer will examine the passport.","2"],
+["for years","phr.","במשך שנים","The secret remained hidden for years.","2"],
+["fuel","n.","דלק","The aircraft needs more fuel.","2"],
+["garage","n.","מוסך / חניה","The car is waiting in the garage.","2"],
+["guard","n., v.","שומר; לשמור","A guard stood outside the door.","2"],
+["guess","v.","לנחש","Can you guess the secret word?","2"],
+["hundreds","n.","מאות","Hundreds of people watched the broadcast.","2"],
+["luck","n.","מזל","With a little luck, we will find the clue.","2"],
+["never mind","phr.","לא משנה / עזוב","Never mind; we can try again.","2"],
+["officer","n.","קצין / שוטר","The officer asked a few questions.","2"],
+["on business","phr.","בנסיעת עסקים / בענייני עבודה","My parents are in London on business.","2"],
+["parliament","n.","פרלמנט / בית נבחרים","The new law was discussed in parliament.","2"],
+["passport","n.","דרכון","Keep your passport in a safe place.","2"],
+["politics","n.","פוליטיקה","The novel is about spies and politics.","2"],
+["real","adj.","אמיתי","Is this a real secret document?","2"],
+["receipt","n.","קבלה","Keep the receipt after you pay.","2"],
+["relations","n.","יחסים","The two countries have good relations.","2"],
+["rough","adj.","קשה / סוער / מחוספס","It was a rough journey across the sea.","2"],
+["sew","v.","לתפור","She can sew a pocket inside the coat.","2"],
+["staff","n.","צוות עובדים","The hotel staff were very helpful.","2"],
+["stress","n.","לחץ","The mission caused a lot of stress.","2"],
+["task","n.","משימה","The first task is to find the code.","2"],
+["the law","n.","החוק","Everyone must obey the law.","2"],
+["though","conj./adv.","למרות זאת / אף על פי ש־","It was difficult, though we did not give up.","2"],
+["treatment","n.","טיפול","The firefighter received treatment for his injury.","2"],
+["wrap","v.","לעטוף","Wrap the device in a piece of cloth.","2"],
+["context","n.","הקשר","Use the context to understand the word.","3"],
+["copy","v.","להעתיק","Do not copy the secret code.","3"],
+["delete","v.","למחוק","Delete the message after reading it.","3"],
+["have something in common","phr.","יש משהו במשותף","The two agents have a lot in common.","3"],
+["order","n.","סדר / הוראה / הזמנה","The officer gave an order to leave.","3"],
+["select","v.","לבחור","Select the correct answer.","3"],
+["step","n.","צעד / שלב","The next step is to open the file.","3"],
+["underline","v.","למתוח קו תחתון","Underline the key information.","3"]
+];
+let vi=0, face=false, vfiltered=[...vocab], vmode='match';
+function showPanel(id){document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id===id));document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active',b.dataset.panel===id));window.scrollTo({top:0,behavior:'smooth'});if(id==='vocab')renderCard();if(id==='grammar')showGrammar('pp');if(id==='reading'&&!document.getElementById('readingContent').innerHTML)renderReading(0)}
+document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>showPanel(b.dataset.panel));
+function renderCard(){if(!vfiltered.length){document.getElementById('vword').textContent='No words found';return}vi=Math.max(0,Math.min(vi,vfiltered.length-1));let v=vfiltered[vi];document.getElementById('vword').textContent=v[0];document.getElementById('vpos').textContent=v[1];document.getElementById('vmeaning').textContent=v[2];document.getElementById('vexample').textContent=v[3];document.getElementById('vmeaning').classList.toggle('hidden',!face);document.getElementById('vexample').classList.toggle('hidden',face);document.getElementById('vcount').textContent=(vi+1)+' / '+vfiltered.length+' cards';document.getElementById('vprogress').style.width=((vi+1)/vfiltered.length*100)+'%'}
+function flipCard(){face=!face;renderCard()}function nextCard(){face=false;vi=(vi+1)%vfiltered.length;renderCard()}function prevCard(){face=false;vi=(vi-1+vfiltered.length)%vfiltered.length;renderCard()}
+function filterVocab(){let q=document.getElementById('vsearch').value.toLowerCase(),g=document.getElementById('vgroup').value;vfiltered=vocab.filter(v=>(g==='all'||v[4]===g)&&(v[0]+' '+v[2]+' '+v[3]).toLowerCase().includes(q));vi=0;face=false;renderCard()}
+function speakCard(){if(!vfiltered.length)return;let v=vfiltered[vi];let u=new SpeechSynthesisUtterance(v[0]+'. '+v[3]);u.lang='en-US';speechSynthesis.cancel();speechSynthesis.speak(u)}
+function showVQuiz(mode,btn){vmode=mode;document.querySelectorAll('#vocab .tabbtn').forEach(b=>b.classList.remove('active'));if(btn)btn.classList.add('active');newVQuiz()}
+let vquizItems=[];
+function newVQuiz(){let pool=[...vocab].sort(()=>Math.random()-.5).slice(0,8);vquizItems=pool.map(v=>{let type=vmode,opts=[v[2],...vocab.filter(x=>x!==v).sort(()=>Math.random()-.5).slice(0,3).map(x=>x[2])].sort(()=>Math.random()-.5);return {v,opts}});let out='';vquizItems.forEach((x,i)=>{let prompt=vmode==='match'?'What does “'+x.v[0]+'” mean?':vmode==='gap'?'Complete: '+x.v[3].replace(new RegExp(x.v[0].replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'i'),'________'):'Choose the English word for: '+x.v[2];let choices=vmode==='hebrew'?[x.v[0],...vocab.filter(y=>y!==x.v).sort(()=>Math.random()-.5).slice(0,3).map(y=>y[0])].sort(()=>Math.random()-.5):vmode==='gap'?[x.v[0],...vocab.filter(y=>y!==x.v).sort(()=>Math.random()-.5).slice(0,3).map(y=>y[0])].sort(()=>Math.random()-.5):x.opts;out+=`<div class="question" data-answer="${esc(vmode==='match'?x.v[2]:x.v[0])}"><p>${i+1}. ${esc(prompt)}</p>${choices.map(c=>`<label><input type="radio" name="vq${i}" value="${esc(c)}"> ${esc(c)}</label>`).join('')}<div class="feedback"></div></div>`});document.getElementById('vquiz').innerHTML=out;document.getElementById('vscore').textContent=''}
+function checkQuiz(id){let qs=[...document.querySelectorAll('#'+id+' .question')],score=0;qs.forEach(q=>{let a=q.dataset.answer,s=q.querySelector('input:checked'),f=q.querySelector('.feedback');if(s&&s.value===a){score++;f.textContent='Correct!';f.className='feedback correct'}else{f.textContent='Answer: '+a;f.className='feedback wrong'}});document.getElementById(id==='vquiz'?'vscore':'').textContent=score+' / '+qs.length+' correct.'}
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+
+const ppQuestions=[
+["The agent _____ (visit) three countries this year.",["has visited","have visited","visited"],"has visited"],
+["We _____ (not / find) the secret code yet.",["hasn't found","haven't found","didn't found"],"haven't found"],
+["_____ you ever _____ (read) a spy novel?",["Did / read","Have / read","Has / read"],"Have / read"],
+["The officers _____ (just / arrive) at the airport.",["have just arrived","has just arrived","just have arrive"],"have just arrived"],
+["She _____ (never / see) a real aircraft carrier.",["have never seen","has never seen","never saw"],"has never seen"],
+["_____ the director _____ (confirm) the meeting?",["Have / confirmed","Has / confirmed","Did / confirmed"],"Has / confirmed"],
+["My parents _____ (not / travel) abroad this year.",["hasn't travelled","haven't travelled","didn't travelled"],"haven't travelled"],
+["The government _____ (already / receive) the report.",["have already received","has already received","already has receive"],"has already received"],
+["I _____ (know) my best friend for five years.",["have known","has knew","am knowing"],"have known"],
+["The spy _____ (not / send) the message yet.",["hasn't sent","haven't sent","hasn't send"],"hasn't sent"],
+["How long _____ you _____ (attend) this school?",["has / attended","have / attended","do / attend"],"have / attended"],
+["They _____ (be) members of the team since 2022.",["has been","have been","are"],"have been"],
+["He _____ (lose) his passport, so he cannot fly.",["have lost","has lost","lost"],"has lost"],
+["We _____ (not / finish) the task yet.",["haven't finished","hasn't finished","not have finish"],"haven't finished"],
+["_____ the firefighter ever _____ (deal) with a fire on an aircraft?",["Has / dealt","Have / dealt","Did / deal"],"Has / dealt"]
+];
+const relQuestions=[
+["The agent _____ works here is from London.",["who","which","where"],"who"],
+["This is the device _____ records conversations.",["who","which","where"],"which"],
+["The hotel _____ the officers stayed was near the airport.",["who","where","which"],"where"],
+["A spy is a person _____ works secretly for a government.",["which","who","where"],"who"],
+["The code _____ you found is up-to-date.",["who","that","where"],"that"],
+["The lab is the place _____ scientists examine evidence.",["who","where","which"],"where"],
+["The woman _____ passport was missing called the officer.",["whose","who","which"],"whose"],
+["The aircraft _____ landed safely belongs to the government.",["who","which","where"],"which"],
+["The officer _____ helped us was very kind.",["which","who","whose"],"who"],
+["This is the novel _____ I told you about.",["where","that","whose"],"that"],
+["A firefighter is someone _____ puts out fires.",["which","who","where"],"who"],
+["The garage _____ the car broke down is closed.",["where","who","whose"],"where"],
+["The message _____ arrived this morning was secret.",["who","that","where"],"that"],
+["The director, _____ is famous, gave an interview.",["which","who","where"],"who"],
+["The citizen _____ phone was stolen spoke to the officer.",["whose","who","which"],"whose"]
+];
+const mixQuestions=[
+["The agent _____ already _____ the report.",["has / copied","have / copy","did / copied"],"has / copied"],
+["The woman _____ works at check-in is my aunt.",["which","who","where"],"who"],
+["We _____ never _____ such a rough journey.",["has / had","have / had","have / have"],"have / had"],
+["This is the building _____ parliament meets.",["who","which","where"],"where"],
+["They _____ not _____ the secret yet.",["has / deleted","have / deleted","have / delete"],"have / deleted"],
+["The device _____ the officer selected is well-made.",["who","that","where"],"that"],
+["_____ you ever _____ an agent face-to-face?",["Have / met","Has / met","Did / met"],"Have / met"],
+["The chief, _____ is responsible for the task, is waiting.",["which","who","whose"],"who"]
+];
+function showGrammar(which,btn){document.querySelectorAll('#grammar .tabbtn').forEach(b=>b.classList.remove('active'));if(btn)btn.classList.add('active');let el=document.getElementById('grammarContent');let qs=which==='pp'?ppQuestions:which==='rel'?relQuestions:mixQuestions;let intro=which==='pp'?`<h3>Present Perfect Simple</h3><p>Use the Present Perfect to talk about experiences, actions connected to now, and situations that started in the past and continue now.</p><div class="grid"><div class="tile"><b>Positive</b><div class="rule">Subject + have / has + V3</div><p>The agent <b>has found</b> the code.</p></div><div class="tile"><b>Negative</b><div class="rule">Subject + haven't / hasn't + V3</div><p>We <b>haven't found</b> the code.</p></div><div class="tile"><b>Questions</b><div class="rule">Have / Has + subject + V3?</div><p><b>Have</b> you <b>seen</b> this film?</p></div></div><div class="case"><b>Remember:</b> I / you / we / they → have. He / she / it → has. Common signal words: ever, never, already, yet, just, since, for. Use the past participle (V3): see–seen, write–written, find–found, go–gone, be–been.</div>`:which==='rel'?`<h3>Relative Clauses</h3><p>Relative clauses give extra information about a person, thing, place, or possession.</p><div class="grid"><div class="tile"><b>WHO</b><p>People</p><p>The agent <b>who</b> found the code is clever.</p></div><div class="tile"><b>WHICH / THAT</b><p>Things and animals</p><p>This is the device <b>that</b> records sound.</p></div><div class="tile"><b>WHERE</b><p>Places</p><p>This is the lab <b>where</b> they work.</p></div><div class="tile"><b>WHOSE</b><p>Possession</p><p>The officer <b>whose</b> passport is missing is here.</p></div></div><div class="case"><b>Detective clue:</b> Ask what the missing information describes: a person (who), a thing (which/that), a place (where), or something belonging to someone (whose).</div>`:`<h3>Mixed Grammar Mission</h3><p>Use both grammar topics. Read the whole sentence before choosing.</p>`;el.innerHTML=intro+`<h3>Practice — ${qs.length} questions</h3><div id="gquiz">`+qs.map((q,i)=>`<div class="question" data-answer="${esc(q[2])}"><p>${i+1}. ${esc(q[0])}</p>${q[1].map(c=>`<label><input type="radio" name="g${i}" value="${esc(c)}"> ${esc(c)}</label>`).join('')}<div class="feedback"></div></div>`).join('')+`</div><div class="controls"><button class="action gold" onclick="checkGrammar()">Check answers</button><button class="action" onclick="showGrammar('${which}')">Try again</button></div><div id="gscore" class="feedback"></div>`}
+function checkGrammar(){let qs=[...document.querySelectorAll('#gquiz .question')],n=0;qs.forEach(q=>{let s=q.querySelector('input:checked'),f=q.querySelector('.feedback');if(s&&s.value===q.dataset.answer){n++;f.textContent='Correct!';f.className='feedback correct'}else{f.textContent='Correct answer: '+q.dataset.answer;f.className='feedback wrong'}});document.getElementById('gscore').textContent='Your score: '+n+' / '+qs.length}
+const stories=[
+{title:"It's a secret",text:`Maya was an ordinary ninth-grade student, but she loved solving puzzles. One afternoon, she found a small metal box under a stone near the school garden. A short code was written on the box. Maya did not try to break it. Instead, she took a photo and showed it to her science teacher, Mr. Cohen.\n\nMr. Cohen examined the box in the school lab. Inside, they found an old notebook with a list of names and dates. The first page said: “This information must stay secret until the right person arrives.” Maya noticed that one name appeared three times. She used the context to guess that the person was a former school director.\n\nThe teacher contacted the local museum. A museum officer confirmed that the notebook had belonged to a scientist who had worked at the school many years ago. It was not a dangerous secret, but a record of a project that had helped the town during a difficult time. Maya was proud. She had learned that a good detective does not act quickly without thinking.`,questions:[
+["Why did Maya take a photo of the box?",["She wanted to send it to a friend.","She wanted to show it to her teacher.","She wanted to sell it.","She wanted to delete the code."],"She wanted to show it to her teacher."],
+["Where did Mr. Cohen examine the box?",["In the school lab","At the museum","In the garden","At the airport"],"In the school lab"],
+["What did Maya find inside the box?",["A passport","A device","An old notebook","A driving license"],"An old notebook"],
+["True or false: The notebook contained information about a dangerous plan.",null,"False"],
+["What helped Maya guess who the repeated name belonged to?",null,"The context"],
+["What does “It” in “It was not a dangerous secret” refer to?",null,"The notebook / the information in the notebook"],
+["Why was Maya proud at the end?",null,"Because she solved the mystery carefully / learned to think before acting."],
+["Find a word in paragraph 2 that means “looked at carefully”.",null,"examined"]
+]},
+{title:"Agent 007",text:`For years, people have enjoyed stories about Agent 007, a secret agent who works for the British government. In the stories, he travels around the world, uses clever devices, and deals with dangerous situations. He is good-looking, confident, and often seems to have very good luck. His missions usually involve a secret code, a powerful organization, or a plan that could threaten international relations.\n\nAgent 007 is a fictional character. He first appeared in a novel written by Ian Fleming. Later, the character became famous in films. The films caught the attention of millions of people because they included exciting aircraft, unusual cars, and dramatic battles. The actor who plays the agent changes, but the character's identity stays the same.\n\nAlthough the stories are entertaining, real intelligence work is usually less exciting. Real agents may spend hours reading reports, checking facts, translating messages, and assessing information. They must be patient and careful. They cannot always use a special device to solve a problem.`,questions:[
+["Who created the character Agent 007?",["A British officer","Ian Fleming","A film director","A real spy"],"Ian Fleming"],
+["Why did the films catch people's attention?",["They were very short.","They showed exciting action and unusual machines.","They taught people to drive.","They were about school life."],"They showed exciting action and unusual machines."],
+["True or false: Agent 007 is a real person.",null,"False"],
+["Name TWO tasks real agents may do.",null,"Read reports; check facts; translate messages; assess information (any two)."],
+["What does “they” in paragraph 3 refer to?",null,"Real agents"],
+["Find a word in paragraph 1 that means “involving danger”.",null,"dangerous"],
+["How is real intelligence work different from the stories?",null,"It is usually less exciting and involves patient, careful research."],
+["The character became famous in…",["novels only","films only","novels and films","newspapers"],"novels and films"]
+]},
+{title:"A spy to the rescue",text:`The aircraft was flying over the sea when one of its engines began to break down. The pilot sent a message to the airport, but the radio signal was weak. On board, hundreds of passengers began to feel stress. A young woman named Lina noticed smoke near the back of the aircraft. She was travelling on business, but she was also a trained firefighter.\n\nLina called the cabin staff and explained what she had seen. She helped them move passengers away from the area and followed the safety instructions. A man who was sitting nearby said he had a small medical device in his bag, but Lina asked him not to open it. The crew needed to deal with one problem at a time.\n\nThe aircraft made an emergency landing. The airport staff and firefighters were waiting. Everyone left the aircraft safely, and the injured passenger received treatment. Later, a reporter interviewed Lina. The headline called her “A Spy to the Rescue”, because she had been travelling with a secret identity: she was an undercover safety expert collecting information about emergency procedures. Lina smiled. “I am not Agent 007,” she said, “but I am happy I could help.”`,questions:[
+["What problem did the aircraft have?",["It ran out of food.","An engine began to break down.","The doors were open.","The pilot lost the passport."],"An engine began to break down."],
+["Why was Lina able to help?",["She was a trained firefighter.","She was the pilot.","She worked at the airport.","She was a doctor."],"She was a trained firefighter."],
+["True or false: Lina told the passengers to open the medical device.",null,"False"],
+["What did Lina help the staff do?",null,"Move passengers away from the area and follow safety instructions."],
+["Why did the reporter use the headline “A Spy to the Rescue”?",null,"Because Lina had a secret identity as an undercover safety expert."],
+["What does “Everyone” in paragraph 3 refer to?",null,"All the people / passengers on the aircraft"],
+["Find a word in paragraph 1 that means “a large number of people”.",null,"hundreds"],
+["How did the story end for the passengers?",["They stayed on the aircraft.","They left safely after an emergency landing.","They flew to another country.","They waited for a new pilot."],"They left safely after an emergency landing."]
+]},
+{title:"The real life of James Bond",text:`James Bond is one of the best-known spies in popular culture, but his life on screen is very different from the work of real intelligence officers. In the films, Bond drives powerful cars, travels first class, and often fights villains face-to-face. He seems to have the power to solve every problem alone. Real officers, however, usually work as part of a team.\n\nReal intelligence officers may work for government organizations. Their task is to collect and assess information that can help protect citizens. Some officers examine documents, check whether information is real, or translate messages. Others build relations with people who can provide useful information. Much of the work is secret, and officers must ensure that their actions follow the law.\n\nThere are also important differences between a film mission and a real one. Real work can take years. It may involve long interviews, careful planning, and many reports. Officers do not usually announce their identity, and they cannot simply ignore rules. Though popular spy stories are exciting, real intelligence work depends on patience, teamwork, and responsibility.`,questions:[
+["How do real officers usually work?",["Alone","As part of a team","Only with actors","Without rules"],"As part of a team"],
+["What is one task of real intelligence officers?",["To make films","To collect and assess information","To sell powerful cars","To attend parties"],"To collect and assess information"],
+["True or false: Real officers can ignore the law during a mission.",null,"False"],
+["Give TWO examples of work real officers may do.",null,"Examine documents; check information; translate messages; build relations (any two)."],
+["What does “their” in paragraph 2 refer to?",null,"Real intelligence officers"],
+["Find a word in paragraph 3 that means “duty / responsibility”.",null,"responsibility"],
+["Why does real intelligence work often take a long time?",null,"Because it involves interviews, careful planning, reports, and checking information."],
+["Complete: Real intelligence work depends on patience, _____, and responsibility.",null,"teamwork"]
+]}
+];
+let storyIndex=0;
+function renderReading(i){storyIndex=i;document.getElementById('readingTabs').innerHTML=stories.map((s,j)=>`<button class="tabbtn ${j===i?'active':''}" onclick="renderReading(${j})">${j+1}. ${s.title}</button>`).join('');let s=stories[i];document.getElementById('readingContent').innerHTML=`<h3>${s.title}</h3><div class="passage">${s.text.split('\n\n').map(p=>'<p>'+esc(p)+'</p>').join('')}</div><h3>Comprehension questions</h3><p class="small muted">Answer in complete sentences when the question asks “why” or “how”. For True/False questions, correct the false statement or support your answer with evidence.</p><div id="rquiz">${s.questions.map((q,j)=>{let opts=q[1]?q[1].map(c=>`<label><input type="radio" name="r${j}" value="${esc(c)}"> ${esc(c)}</label>`).join(''):`<textarea rows="2" placeholder="Write your answer here..."></textarea>`;return `<div class="question" data-answer="${esc(q[2])}"><p>${j+1}. ${esc(q[0])}</p>${opts}<div class="feedback"></div></div>`}).join('')}</div><div class="controls"><button class="action gold" onclick="checkReading()">Check answers</button><button class="action" onclick="renderReading(${i})">Reset this file</button></div><div id="rscore" class="feedback"></div>`}
+function checkReading(){let qs=[...document.querySelectorAll('#rquiz .question')],n=0;qs.forEach(q=>{let s=q.querySelector('input:checked'),t=q.querySelector('textarea'),a=q.dataset.answer,f=q.querySelector('.feedback'),given=s?s.value:(t?t.value.trim():'');if(given&& (given.toLowerCase()===a.toLowerCase() || (!s&&a.toLowerCase().split(/[\/;]/).some(x=>given.toLowerCase().includes(x.trim().slice(0,12)))))){n++;f.textContent='Good answer. Compare it with the suggested answer.';f.className='feedback correct'}else{f.textContent='Suggested answer: '+a;f.className='feedback wrong'}});document.getElementById('rscore').textContent='Self-check: '+n+' / '+qs.length+' answers match closely. Open answers may be correct in other wording.'}
+renderCard();newVQuiz();showGrammar('pp');renderReading(0);
+</script></body></html>
